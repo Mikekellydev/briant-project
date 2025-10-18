@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Brian's Bulk Pickup</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <meta name="description" content="Contact Brian's Bulk Pickup. Text a photo for a fast estimate or book your pickup time." />
+</head>
+<body>
+  
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <div class="logo">BB</div>
+      <span>Brian's Bulk Pickup</span>
+    </a>
+    <nav id="menu" class="menu">
+      <a href="index.html" class="">Home</a>
+      <a href="residential.html" class="">Residential</a>
+      <a href="commercial.html" class="">Commercial</a>
+      <a href="about.html" class="">About</a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="contact.html#book" class="cta">Book Now</a>
+    </nav>
+    <button id="menu-btn" class="cta" aria-label="Menu">Menu</button>
+  </div>
+</header>
+
+  <main class="container">
+    <h1>Contact</h1>
+    <p class="note">Text a photo for a quick estimate or send the form and we will reply soon.</p>
+    <div class="grid-2" id="book">
+      <div class="card">
+        <h2>Fast estimate</h2>
+        <p class="note">Text: <a href="sms:+12604947315">+1 260 494 7315</a></p>
+        <p class="note">Email: <a href="mailto:info@briansbulkpickup.com">info@briansbulkpickup.com</a></p>
+        <p class="note">Include a brief description and pickup location.</p>
+      </div>
+      <div class="card">
+        <h2>Request pickup</h2>
+        <form class="form" onsubmit="event.preventDefault(); alert('Form submitted. Replace with your form handler.');">
+          <label>Full name<input required type="text" name="name" /></label>
+          <label>Phone<input required type="tel" name="phone" /></label>
+          <label>Email<input type="email" name="email" /></label>
+          <label>Address or ZIP<input required type="text" name="address" /></label>
+          <label>Describe items<textarea name="items" rows="4"></textarea></label>
+          <label>Preferred day<select name="day">
+            <option>Any day</option><option>Monday</option><option>Tuesday</option><option>Wednesday</option>
+            <option>Thursday</option><option>Friday</option><option>Saturday</option>
+          </select></label>
+          <button class="cta" type="submit">Submit</button>
+          <p class="note">This form is a demo. Connect to your email or CRM.</p>
+        </form>
+      </div>
+    </div>
+  </main>
+  
+<footer class="footer">
+  <div class="container cols">
+    <div>
+      <div class="brand">
+        <div class="logo">BB</div>
+        <span>Brian's Bulk Pickup</span>
+      </div>
+      <p class="note">Local junk removal with integrity and care. Fast quotes, on time pickup, clean finish.</p>
+      <p class="note">Serving Greater Fort Wayne and nearby areas.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <div class="list">
+        <a href="residential.html">Residential</a>
+        <a href="commercial.html">Commercial</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p class="note">Phone: <a href="tel:+12604947315">+1 260 494 7315</a></p>
+      <p class="note">Email: <a href="mailto:info@briansbulkpickup.com">info@briansbulkpickup.com</a></p>
+    </div>
+  </div>
+  <div class="container" style="padding:10px 24px;color:#7a7a7a;">© <span id="year"></span> Brian's Bulk Pickup</div>
+</footer>
+<script src="assets/script.js"></script>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+
+</body>
+</html>
