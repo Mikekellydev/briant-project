@@ -104,5 +104,38 @@ input,select{background:#fff;border:1px solid var(--line);border-radius:10px;col
 .hero-actions { margin-top: 12px; display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
 
 @media (max-width: 700px) {
-  .hero-img--edge { aspect-ratio: 16 / 10; }
+  .hero-img--edge { aspect-ratio: 16 / 10; }/* Ensure header stays above hero overlay */
+.header { position: sticky; top: 0; z-index: 1000; }
+
+/* Desktop: show menu, hide button */
+#menu-btn { display: none; }
+
+/* Mobile behavior */
+@media (max-width: 900px) {
+  /* Show the toggle button */
+  #menu-btn { display: inline-flex; }
+
+  /* Hide menu by default; reveal when .open is added by JS */
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;              /* drop below the header */
+    left: 0; right: 0;
+    background: #fff;       /* bright theme background */
+    border-bottom: 1px solid var(--line);
+    padding: 12px 24px;
+    gap: 12px;
+    flex-direction: column;
+    box-shadow: 0 10px 24px rgba(2,6,23,.08);
+    z-index: 1001;          /* above hero image overlay */
+  }
+  .menu.open { display: flex; }
+
+  /* Make the header a positioning context for the absolute menu */
+  .nav { position: relative; }
+}
+
+/* If you’re using the edge-to-edge hero with overlay, keep it behind header */
+.hero-bleed { z-index: 1; }
+
 }
