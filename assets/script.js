@@ -66,3 +66,34 @@ window.addEventListener('load', updateCalc);
     }
   });
 })();
+
+// Mobile menu toggle with hamburger animation
+(function () {
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+  if (!btn || !menu) return;
+
+  function toggleMenu(force) {
+    const isOpen = typeof force === 'boolean' ? !force : btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!isOpen));
+    menu.classList.toggle('open', !isOpen);
+  }
+
+  btn.addEventListener('click', () => toggleMenu());
+
+  // Close when a link in the menu is clicked (mobile UX)
+  menu.addEventListener('click', (e) => {
+    if (e.target.closest('a')) {
+      btn.setAttribute('aria-expanded', 'false');
+      menu.classList.remove('open');
+    }
+  });
+
+  // Escape key closes menu
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      btn.setAttribute('aria-expanded', 'false');
+      menu.classList.remove('open');
+    }
+  });
+})();

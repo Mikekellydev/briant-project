@@ -139,3 +139,77 @@ input,select{background:#fff;border:1px solid var(--line);border-radius:10px;col
 .hero-bleed { z-index: 1; }
 
 }
+
+/* Accessible screen-reader text */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0, 0, 1px, 1px); white-space: nowrap; border: 0;
+}
+
+/* Keep header above hero overlay */
+.header { position: sticky; top: 0; z-index: 1000; }
+
+/* Desktop: show menu, hide hamburger */
+.hamburger-btn { display: none; }
+
+@media (max-width: 900px) {
+  /* Show hamburger on mobile */
+  .hamburger-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: #fff;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+  }
+
+  /* The three bars */
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    display: block;
+    width: 22px; height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    position: relative;
+    transition: transform .25s ease, opacity .2s ease, top .25s ease, bottom .25s ease;
+    content: "";
+  }
+  .hamburger {
+    background: var(--text);
+  }
+  .hamburger::before { position: absolute; top: -7px; }
+  .hamburger::after  { position: absolute; bottom: -7px; }
+
+  /* When open: morph into an X */
+  #menu-btn[aria-expanded="true"] .hamburger {
+    transform: rotate(45deg);
+  }
+  #menu-btn[aria-expanded="true"] .hamburger::before {
+    top: 0; transform: rotate(90deg);
+  }
+  #menu-btn[aria-expanded="true"] .hamburger::after {
+    bottom: 0; opacity: 0;
+  }
+
+  /* Mobile menu panel (drops under header) */
+  .nav { position: relative; }
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    padding: 12px 24px;
+    gap: 12px;
+    flex-direction: column;
+    box-shadow: 0 10px 24px rgba(2,6,23,.08);
+    z-index: 1001;
+  }
+  .menu.open { display: flex; }
+}
