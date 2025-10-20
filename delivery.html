@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Materials Delivery | Brian's Bulk Pickup</title>
+<link rel="stylesheet" href="assets/style.css"/>
+<meta name="description" content="Mulch, gravel, top soil, stone and other bulk materials delivered to your driveway or job site."/>
+</head><body>
+
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <div class="logo">BB</div>
+      <span>Brian's Bulk Pickup</span>
+    </a>
+    <nav id="menu" class="menu">
+      <a href="index.html" class="">Home</a>
+      <a href="dropoff.html" class="">Trailer Drop Off</a>
+      <a href="delivery.html" class="active">Materials Delivery</a>
+      <a href="service-areas.html" class="">Service Areas</a>
+      <a href="commercial.html" class="">Commercial</a>
+      <a href="about.html" class="">About</a>
+      <a href="contact.html" class="">Contact</a>
+      <a href="contact.html#book" class="cta">Book Now</a>
+    </nav>
+    <button id="menu-btn" class="cta" aria-label="Menu">Menu</button>
+  </div>
+</header>
+
+<main class="container">
+<h1>Materials delivery</h1>
+<div class="grid-2">
+  <div class="card">
+    <h2>Popular materials</h2>
+    <ul class="list">
+      <li>Mulch (brown, black, natural)</li>
+      <li>Gravel (pea stone, limestone)</li>
+      <li>Top soil or compost</li>
+      <li>River rock or decorative stone</li>
+    </ul>
+    <p class="small">Tell us what you need and we will source and deliver. We can also pick up from your supplier.</p>
+    <a class="cta" href="contact.html#book">Request delivery</a>
+  </div>
+  <div class="card"><img src="assets/gravel-Unload-1.webp" alt="Mulch and gravel delivery"/></div>
+  <div class="card"><img src="assets/Mulch-Unload-1.webp" alt="Mulch and gravel delivery"/></div>
+  <div class="card"><img src="assets/Mulch-Unload-2.webp" alt="Mulch and gravel delivery"/></div>
+
+</div>
+
+<div class="card" style="margin-top:12px">
+  <h2>Delivery capacity calculator</h2>
+  <p class="small">Estimate how much material (by volume and approximate tons) your trailer can carry.</p>
+  <div class="grid-2">
+    <div class="card">
+      <label>Trailer length (ft)<br/><input id="trailer-length" type="number" min="0" step="0.1" value="12"/></label>
+      <label>Trailer width (ft)<br/><input id="trailer-width" type="number" min="0" step="0.1" value="6"/></label>
+      <label>Material height (ft)<br/><input id="trailer-height" type="number" min="0" step="0.1" value="2"/></label>
+      <label>Material<br/>
+        <select id="material">
+          <option value="mulch">Mulch</option>
+          <option value="topsoil">Top soil</option>
+          <option value="gravel">Gravel</option>
+          <option value="sand">Sand</option>
+        </select>
+      </label>
+      <p class="small">This calculator uses typical bulk densities for an estimate only. Always follow safe weight limits.</p>
+    </div>
+    <div class="card">
+      <h3>Estimated capacity</h3>
+      <p><strong><span id="calc-yd">0.00</span> yd³</strong> (cubic yards)</p>
+      <p><strong><span id="calc-tons">0.00</span> tons</strong> (approximate)</p>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container cols">
+    <div>
+      <div class="brand">
+        <div class="logo">BB</div>
+        <span>Brian's Bulk Pickup</span>
+      </div>
+      <p class="small">Trailer drop off, junk removal, and materials delivery. Clear pricing, friendly service.</p>
+      <p class="small">Serving Hampton Roads and nearby areas.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <div class="list">
+        <a href="dropoff.html">Trailer Drop Off</a>
+        <a href="delivery.html">Materials Delivery</a>
+        <a href="service-areas.html">Service Areas</a>
+        <a href="commercial.html">Commercial</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p class="small">Phone: <a href="tel:+17575551234">+1 757 555 1234</a></p>
+      <p class="small">Email: <a href="mailto:info@briansbulkpickup.com">info@briansbulkpickup.com</a></p>
+    </div>
+  </div>
+  <div class="container" style="padding:10px 24px;color:#64748b;">© <span id="year"></span> Brian's Bulk Pickup</div>
+</footer>
+<script src="assets/script.js"></script>
+
+</body></html>
